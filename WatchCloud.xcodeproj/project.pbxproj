@@ -11,15 +11,13 @@
 		4FFDBDA727BB1B4FD2C33B28 /* Pods_WatchCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDB555390495FA9E611F42A /* Pods_WatchCloud.framework */; };
 		6F73B7C122860FDA005CFD55 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F73B7C022860FDA005CFD55 /* RegisterVC.swift */; };
 		6F806F3F2285E89600BCF18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F806F3E2285E89600BCF18B /* AppDelegate.swift */; };
-		6F806F412285E89600BCF18B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F806F402285E89600BCF18B /* MainVC.swift */; };
+		6F806F412285E89600BCF18B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F806F402285E89600BCF18B /* HomeVC.swift */; };
 		6F806F442285E89600BCF18B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F806F422285E89600BCF18B /* Main.storyboard */; };
-		6F806F462285E89800BCF18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F806F452285E89800BCF18B /* Assets.xcassets */; };
 		6F806F492285E89800BCF18B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F806F472285E89800BCF18B /* LaunchScreen.storyboard */; };
 		6F806F572285EFAD00BCF18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F806F562285EFAD00BCF18B /* AppDelegate.swift */; };
 		6F806F592285EFAD00BCF18B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F806F582285EFAD00BCF18B /* ViewController.swift */; };
 		6F806F5C2285EFAD00BCF18B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F806F5A2285EFAD00BCF18B /* Main.storyboard */; };
 		6F806F612285EFAE00BCF18B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F806F5F2285EFAE00BCF18B /* LaunchScreen.storyboard */; };
-		6F806F672285EFF300BCF18B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F806F452285E89800BCF18B /* Assets.xcassets */; };
 		6F806F6F2285FEDB00BCF18B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F806F6E2285FEDB00BCF18B /* LoginVC.swift */; };
 		6F806F71228601F600BCF18B /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F806F70228601F600BCF18B /* Auth.storyboard */; };
 		6FACA1E62286210100395BA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA1E52286210100395BA8 /* GoogleService-Info.plist */; };
@@ -30,6 +28,21 @@
 		6FACA1EF2286D64600395BA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA1ED2286D64600395BA8 /* Constants.swift */; };
 		6FACA1F22286D87700395BA8 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA1F12286D87700395BA8 /* RoundedViews.swift */; };
 		6FACA1F32286D87700395BA8 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA1F12286D87700395BA8 /* RoundedViews.swift */; };
+		6FACA1F52286E96F00395BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA1F42286E96E00395BA8 /* Assets.xcassets */; };
+		6FACA1F62286E96F00395BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA1F42286E96E00395BA8 /* Assets.xcassets */; };
+		6FACA1F82286EB2100395BA8 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA1F72286EB2100395BA8 /* Account.storyboard */; };
+		6FACA1FA2286EB9800395BA8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA1F92286EB9800395BA8 /* Home.storyboard */; };
+		6FACA1FC2286F34C00395BA8 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA1FB2286F34C00395BA8 /* AccountVC.swift */; };
+		6FACA2002287108C00395BA8 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA1FE2287108C00395BA8 /* ForgotPasswordVC.swift */; };
+		6FACA2012287108C00395BA8 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA1FF2287108C00395BA8 /* ForgotPasswordVC.xib */; };
+		6FACA2032287168000395BA8 /* FirebaseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA2022287168000395BA8 /* FirebaseExtensions.swift */; };
+		6FACA2042287173200395BA8 /* FirebaseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA2022287168000395BA8 /* FirebaseExtensions.swift */; };
+		6FACA20622871B3000395BA8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA20522871B3000395BA8 /* Category.swift */; };
+		6FACA20722871B3000395BA8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA20522871B3000395BA8 /* Category.swift */; };
+		6FACA20A22871BC700395BA8 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA20822871BC700395BA8 /* CategoryCell.swift */; };
+		6FACA20B22871BC700395BA8 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA20822871BC700395BA8 /* CategoryCell.swift */; };
+		6FACA20C22871BC700395BA8 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA20922871BC700395BA8 /* CategoryCell.xib */; };
+		6FACA20D22871BC700395BA8 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA20922871BC700395BA8 /* CategoryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +53,8 @@
 		6F73B7C022860FDA005CFD55 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		6F806F3B2285E89600BCF18B /* WatchCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F806F3E2285E89600BCF18B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F806F402285E89600BCF18B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		6F806F402285E89600BCF18B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		6F806F432285E89600BCF18B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6F806F452285E89800BCF18B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F806F482285E89800BCF18B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F806F4A2285E89800BCF18B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F806F542285EFAD00BCF18B /* WatchCloudAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchCloudAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +70,16 @@
 		6FACA1EA2286D2A400395BA8 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		6FACA1ED2286D64600395BA8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6FACA1F12286D87700395BA8 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		6FACA1F42286E96E00395BA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FACA1F72286EB2100395BA8 /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		6FACA1F92286EB9800395BA8 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		6FACA1FB2286F34C00395BA8 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		6FACA1FE2287108C00395BA8 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		6FACA1FF2287108C00395BA8 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		6FACA2022287168000395BA8 /* FirebaseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseExtensions.swift; sourceTree = "<group>"; };
+		6FACA20522871B3000395BA8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		6FACA20822871BC700395BA8 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		6FACA20922871BC700395BA8 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		76ADBDBC6C4DAEC783CF47E0 /* Pods-WatchCloudAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchCloudAdmin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchCloudAdmin/Pods-WatchCloudAdmin.debug.xcconfig"; sourceTree = "<group>"; };
 		FC7FD12CE67F0C0C5289686A /* Pods_WatchCloudAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchCloudAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				6F806F662285EFDE00BCF18B /* Shared */,
+				6FACA1F42286E96E00395BA8 /* Assets.xcassets */,
 				6F806F3D2285E89600BCF18B /* WatchCloud */,
 				6F806F552285EFAD00BCF18B /* WatchCloudAdmin */,
 				6F806F3C2285E89600BCF18B /* Products */,
@@ -126,9 +149,9 @@
 		6F806F3D2285E89600BCF18B /* WatchCloud */ = {
 			isa = PBXGroup;
 			children = (
+				6FACA1FD2287107200395BA8 /* XIBs */,
 				6F806F6B2285FD9500BCF18B /* Controller */,
 				6F806F6A2285FD9200BCF18B /* View */,
-				6F806F692285FD8D00BCF18B /* Model */,
 				6F806F682285FD8300BCF18B /* Storyboards */,
 				6F806F3E2285E89600BCF18B /* AppDelegate.swift */,
 				6F806F4A2285E89800BCF18B /* Info.plist */,
@@ -153,9 +176,10 @@
 		6F806F662285EFDE00BCF18B /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				6FACA20E22871BDE00395BA8 /* XIBs */,
+				6F806F692285FD8D00BCF18B /* Model */,
 				6FACA1F02286D86400395BA8 /* View */,
 				6FACA1E92286D28F00395BA8 /* Utils */,
-				6F806F452285E89800BCF18B /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -166,6 +190,8 @@
 				6F806F472285E89800BCF18B /* LaunchScreen.storyboard */,
 				6F806F422285E89600BCF18B /* Main.storyboard */,
 				6F806F70228601F600BCF18B /* Auth.storyboard */,
+				6FACA1F72286EB2100395BA8 /* Account.storyboard */,
+				6FACA1F92286EB9800395BA8 /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -173,6 +199,7 @@
 		6F806F692285FD8D00BCF18B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6FACA20522871B3000395BA8 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,9 +214,10 @@
 		6F806F6B2285FD9500BCF18B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6F806F402285E89600BCF18B /* MainVC.swift */,
+				6F806F402285E89600BCF18B /* HomeVC.swift */,
 				6F806F6E2285FEDB00BCF18B /* LoginVC.swift */,
 				6F73B7C022860FDA005CFD55 /* RegisterVC.swift */,
+				6FACA1FB2286F34C00395BA8 /* AccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +227,7 @@
 			children = (
 				6FACA1EA2286D2A400395BA8 /* Extentions.swift */,
 				6FACA1ED2286D64600395BA8 /* Constants.swift */,
+				6FACA2022287168000395BA8 /* FirebaseExtensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -207,8 +236,26 @@
 			isa = PBXGroup;
 			children = (
 				6FACA1F12286D87700395BA8 /* RoundedViews.swift */,
+				6FACA20822871BC700395BA8 /* CategoryCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6FACA1FD2287107200395BA8 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				6FACA1FE2287108C00395BA8 /* ForgotPasswordVC.swift */,
+				6FACA1FF2287108C00395BA8 /* ForgotPasswordVC.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		6FACA20E22871BDE00395BA8 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				6FACA20922871BC700395BA8 /* CategoryCell.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,10 +341,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FACA1FA2286EB9800395BA8 /* Home.storyboard in Resources */,
 				6F806F71228601F600BCF18B /* Auth.storyboard in Resources */,
+				6FACA2012287108C00395BA8 /* ForgotPasswordVC.xib in Resources */,
+				6FACA1F52286E96F00395BA8 /* Assets.xcassets in Resources */,
 				6F806F492285E89800BCF18B /* LaunchScreen.storyboard in Resources */,
 				6FACA1E62286210100395BA8 /* GoogleService-Info.plist in Resources */,
-				6F806F462285E89800BCF18B /* Assets.xcassets in Resources */,
+				6FACA1F82286EB2100395BA8 /* Account.storyboard in Resources */,
+				6FACA20C22871BC700395BA8 /* CategoryCell.xib in Resources */,
 				6F806F442285E89600BCF18B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,9 +357,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FACA20D22871BC700395BA8 /* CategoryCell.xib in Resources */,
 				6F806F612285EFAE00BCF18B /* LaunchScreen.storyboard in Resources */,
 				6FACA1E82286C04400395BA8 /* GoogleService-Info.plist in Resources */,
-				6F806F672285EFF300BCF18B /* Assets.xcassets in Resources */,
+				6FACA1F62286E96F00395BA8 /* Assets.xcassets in Resources */,
 				6F806F5C2285EFAD00BCF18B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,7 +404,6 @@
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -367,7 +418,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -441,13 +491,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F806F412285E89600BCF18B /* MainVC.swift in Sources */,
+				6FACA2032287168000395BA8 /* FirebaseExtensions.swift in Sources */,
+				6FACA1FC2286F34C00395BA8 /* AccountVC.swift in Sources */,
+				6F806F412285E89600BCF18B /* HomeVC.swift in Sources */,
 				6F73B7C122860FDA005CFD55 /* RegisterVC.swift in Sources */,
 				6FACA1EB2286D2A400395BA8 /* Extentions.swift in Sources */,
 				6F806F3F2285E89600BCF18B /* AppDelegate.swift in Sources */,
+				6FACA2002287108C00395BA8 /* ForgotPasswordVC.swift in Sources */,
 				6FACA1F22286D87700395BA8 /* RoundedViews.swift in Sources */,
 				6F806F6F2285FEDB00BCF18B /* LoginVC.swift in Sources */,
 				6FACA1EE2286D64600395BA8 /* Constants.swift in Sources */,
+				6FACA20622871B3000395BA8 /* Category.swift in Sources */,
+				6FACA20A22871BC700395BA8 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,8 +513,11 @@
 				6F806F592285EFAD00BCF18B /* ViewController.swift in Sources */,
 				6F806F572285EFAD00BCF18B /* AppDelegate.swift in Sources */,
 				6FACA1F32286D87700395BA8 /* RoundedViews.swift in Sources */,
+				6FACA20B22871BC700395BA8 /* CategoryCell.swift in Sources */,
 				6FACA1EC2286D2A400395BA8 /* Extentions.swift in Sources */,
+				6FACA2042287173200395BA8 /* FirebaseExtensions.swift in Sources */,
 				6FACA1EF2286D64600395BA8 /* Constants.swift in Sources */,
+				6FACA20722871B3000395BA8 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +683,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 727Q9XPG67;
 				INFOPLIST_FILE = WatchCloud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -632,7 +691,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.dovgopol.WatchCloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -644,6 +703,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 727Q9XPG67;
 				INFOPLIST_FILE = WatchCloud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,7 +711,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.dovgopol.WatchCloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -663,6 +723,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 727Q9XPG67;
 				INFOPLIST_FILE = WatchCloudAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -670,7 +731,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.dovgopol.WatchCloudAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -682,6 +743,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 727Q9XPG67;
 				INFOPLIST_FILE = WatchCloudAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -689,7 +751,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dev.dovgopol.WatchCloudAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

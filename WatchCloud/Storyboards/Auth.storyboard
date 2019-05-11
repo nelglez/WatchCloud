@@ -74,6 +74,9 @@
                                         <state key="normal" title="Forgot password?">
                                             <color key="titleColor" red="0.16862745100000001" green="0.66666666669999997" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPasswordClicked:" destination="XUm-q9-CcP" eventType="touchUpInside" id="rTi-QU-mpn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwQ-lr-82v" customClass="RoundedButton" customModule="WatchCloud" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="135" width="334" height="40"/>
@@ -90,6 +93,9 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signInClicked:" destination="XUm-q9-CcP" eventType="touchUpInside" id="D2u-56-OPz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJN-jR-hAj" customClass="RoundedButton" customModule="WatchCloud" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="190" width="334" height="40"/>
@@ -106,6 +112,9 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="guestClicked:" destination="XUm-q9-CcP" eventType="touchUpInside" id="L9g-Sc-pAB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A14-Pj-QmI" customClass="RoundedButton" customModule="WatchCloud" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="245" width="334" height="40"/>
@@ -147,6 +156,11 @@
                         <viewLayoutGuide key="safeArea" id="HFs-yH-MTM"/>
                     </view>
                     <navigationItem key="navigationItem" id="iy7-pi-2uM"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="soa-ib-0pd" id="BbH-Mw-dcZ"/>
+                        <outlet property="emailTxt" destination="Ref-bW-fvZ" id="Xgu-9p-Pt0"/>
+                        <outlet property="passwordTxt" destination="UWH-z5-Lxw" id="c6P-wL-psp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swk-Vl-55a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
