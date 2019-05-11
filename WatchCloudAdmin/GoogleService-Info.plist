@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>989653355516-t871iab8iie02e5r9aj3ee4pee14e5j8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.989653355516-t871iab8iie02e5r9aj3ee4pee14e5j8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD-781jyg2NlzQt6L37dSh7lU6r2lwiRvI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>989653355516</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dev.dovgopol.WatchCloudAdmin</string>
+	<key>PROJECT_ID</key>
+	<string>watchcloud-5c1fc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>watchcloud-5c1fc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:989653355516:ios:73d28404918a23e8</string>
+	<key>DATABASE_URL</key>
+	<string>https://watchcloud-5c1fc.firebaseio.com</string>
+</dict>
+</plist>
