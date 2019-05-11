@@ -16,8 +16,12 @@ class MainVC: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "auth")
+        loadRightController()
+    }
+    
+    private func loadRightController(){
+        let storyboard = UIStoryboard(name: Storyboard.AuthStoryboard, bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: StoryboardId.AuthVC)
         present(controller, animated: false, completion: nil)
     }
 }

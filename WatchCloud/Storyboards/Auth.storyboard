@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XUm-q9-CcP">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -75,7 +75,7 @@
                                             <color key="titleColor" red="0.16862745100000001" green="0.66666666669999997" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwQ-lr-82v">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwQ-lr-82v" customClass="RoundedButton" customModule="WatchCloud" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="135" width="334" height="40"/>
                                         <color key="backgroundColor" red="0.16862745100000001" green="0.66666666669999997" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -85,8 +85,13 @@
                                         <state key="normal" title="SIGN IN">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJN-jR-hAj">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJN-jR-hAj" customClass="RoundedButton" customModule="WatchCloud" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="190" width="334" height="40"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -96,8 +101,13 @@
                                         <state key="normal" title="CONTINUE AS A GUEST">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A14-Pj-QmI">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A14-Pj-QmI" customClass="RoundedButton" customModule="WatchCloud" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="245" width="334" height="40"/>
                                         <color key="backgroundColor" red="0.26628370099999998" green="0.40085438074109586" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -107,6 +117,14 @@
                                         <state key="normal" title="SIGN UP">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="MOZ-1x-1zM" kind="show" id="bXm-cl-8r7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -198,7 +216,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDw-3I-8xb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDw-3I-8xb" customClass="RoundedButton" customModule="WatchCloud" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="165" width="334" height="40"/>
                                         <color key="backgroundColor" red="0.16862745100000001" green="0.66666666669999997" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -208,6 +226,14 @@
                                         <state key="normal" title="SIGN UP">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="signUpClicked:" destination="MOZ-1x-1zM" eventType="touchUpInside" id="Nm3-21-5jg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH4-30-DJK">
                                         <rect key="frame" x="0.0" y="220" width="334" height="15"/>
@@ -218,6 +244,9 @@
                                         <state key="normal" title="Already have an account">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="XUm-q9-CcP" kind="show" id="BAF-6d-P1p"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -225,14 +254,14 @@
                                 <rect key="frame" x="188.5" y="285" width="37" height="37"/>
                                 <color key="color" red="0.16862745100000001" green="0.66666666669999997" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="uOB-t8-Yn9">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="uOB-t8-Yn9">
                                 <rect key="frame" x="346" y="405" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="bic-uf-LqN"/>
                                     <constraint firstAttribute="width" constant="20" id="cky-k1-KYV"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="yIl-48-jJK">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross" translatesAutoresizingMaskIntoConstraints="NO" id="yIl-48-jJK">
                                 <rect key="frame" x="346" y="460" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="2mb-M7-Trf"/>
@@ -258,10 +287,18 @@
                         <viewLayoutGuide key="safeArea" id="HCF-Za-pK5"/>
                     </view>
                     <navigationItem key="navigationItem" id="bsX-ld-mYt"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="TlI-HP-AbJ" id="473-1h-DFE"/>
+                        <outlet property="confirmPasswordCheckImg" destination="yIl-48-jJK" id="995-uG-t3l"/>
+                        <outlet property="confirmPasswordTxt" destination="2kb-xg-lbS" id="o2u-87-PzT"/>
+                        <outlet property="emailTxt" destination="d13-EZ-yqS" id="0Th-qz-gbu"/>
+                        <outlet property="passwordCheckImg" destination="uOB-t8-Yn9" id="zwO-hF-X56"/>
+                        <outlet property="passwordTxt" destination="RZj-qs-ZrR" id="OaR-wG-MCt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUD-x3-TuN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="-324"/>
+            <point key="canvasLocation" x="1868" y="-324"/>
         </scene>
     </scenes>
     <resources>
