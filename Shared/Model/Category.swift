@@ -14,5 +14,13 @@ struct Category {
     var id: String
     var imgUrl: String
     var isActive: Bool = true
-    var timeStamp: Timestamp
+    var timestamp: Timestamp
+    
+    init(data: [String: Any]) {
+        self.name = data["name"] as? String ?? ""
+        self.id = data["id"] as? String ?? ""
+        self.imgUrl = data["imgUrl"] as? String ?? ""
+        self.isActive = data["isActive"] as? Bool ?? true
+        self.timestamp = data["timestamp"] as? Timestamp ?? Timestamp()
+    }
 }

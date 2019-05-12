@@ -8,6 +8,17 @@
 
 import Firebase
 
+extension Firestore {
+    var categories: Query {
+        return collection("categories").order(by: "timestamp")
+    }
+    
+    
+    func products(category: String) -> Query {
+        return collection("products").whereField("category", isEqualTo: category).order(by: "timestamp", descending: true)
+    }
+}
+
 extension Auth {
     func handleFireAuthError(error: Error, vc: UIViewController) {
         

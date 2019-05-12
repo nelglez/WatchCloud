@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Account-->
+        <!--AccountVC-->
         <scene sceneID="XAj-Bg-Tgh">
             <objects>
                 <viewController id="qJp-HO-vdk" customClass="AccountVC" customModule="WatchCloud" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3FN-SU-zOf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Account" id="lgr-MZ-HtG"/>
+                    <navigationItem key="navigationItem" id="lgr-MZ-HtG"/>
                     <connections>
                         <outlet property="loginOutBtn" destination="0CT-Ht-bTT" id="JC1-qM-g4z"/>
                     </connections>

@@ -8,14 +8,15 @@
 
 import UIKit
 import Firebase
+import Crashlytics
+import Fabric
 
 class AccountVC: UIViewController {
 
     @IBOutlet weak var loginOutBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navBarSettings()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -23,9 +24,12 @@ class AccountVC: UIViewController {
             //we are logged in
             loginOutBtn.setTitle("Logout", for: .normal)
         } else {
-//            loginOutBtn.setTitle("Login", for: .normal)
             presentLoginController()
         }
+    }
+    
+    func navBarSettings(){
+        self.title = "Account"
     }
     
     @IBAction func loginBtn(_ sender: Any) {
@@ -48,18 +52,6 @@ class AccountVC: UIViewController {
                 Auth.auth().handleFireAuthError(error: error, vc: self)
             }
         }
-        
-//        if let user = Auth.auth().currentUser {
-//            //we are logged in
-//            do{
-//                try Auth.auth().signOut()
-//                presentLoginController()
-//            } catch {
-//                debugPrint(error.localizedDescription)
-//            }
-//        } else {
-//            presentLoginController()
-//        }
         
     }
     

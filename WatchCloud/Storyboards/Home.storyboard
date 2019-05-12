@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Categories-->
+        <!--HomeVC-->
         <scene sceneID="2oc-9g-ynW">
             <objects>
                 <viewController id="bWJ-Kt-f4x" customClass="HomeVC" customModule="WatchCloud" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,15 +45,55 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="is0-BF-kLK"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Categories" largeTitleDisplayMode="always" id="1vD-Aa-Oap"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="1vD-Aa-Oap">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="KBb-de-JgO"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="JKj-Cp-Kev" id="Kza-na-t34"/>
                         <outlet property="collectionView" destination="0YP-uB-dfw" id="dEC-Dn-3hx"/>
+                        <segue destination="nlC-Cf-Yh8" kind="show" identifier="toProductsVC" id="ZcL-b0-85W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUm-L1-fkY" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="107.8125"/>
+        </scene>
+        <!--ProductsVC-->
+        <scene sceneID="yAm-8q-Dpu">
+            <objects>
+                <viewController id="nlC-Cf-Yh8" customClass="ProductsVC" customModule="WatchCloud" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eIX-qu-WIH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sVF-d8-oEw">
+                                <rect key="frame" x="20" y="140" width="374" height="756"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="UXf-5E-1DY">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VX4-8Y-fM3" firstAttribute="trailing" secondItem="sVF-d8-oEw" secondAttribute="trailing" constant="20" id="Bza-Al-DQP"/>
+                            <constraint firstItem="sVF-d8-oEw" firstAttribute="top" secondItem="VX4-8Y-fM3" secondAttribute="top" id="FOV-dM-1bK"/>
+                            <constraint firstItem="sVF-d8-oEw" firstAttribute="leading" secondItem="VX4-8Y-fM3" secondAttribute="leading" constant="20" id="Kdc-lz-rCT"/>
+                            <constraint firstAttribute="bottom" secondItem="sVF-d8-oEw" secondAttribute="bottom" id="eZf-0m-szA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VX4-8Y-fM3"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="sVF-d8-oEw" id="FEX-R9-6Mc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBA-Jx-8Ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2755" y="110"/>
         </scene>
         <!--Home-->
         <scene sceneID="69w-lj-lsn">
@@ -85,4 +125,5 @@
             <point key="canvasLocation" x="1047.8260869565217" y="107.8125"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -8,6 +8,8 @@ def shared_pods
     pod 'Firebase/Auth'
     pod 'Firebase/Firestore'
     pod 'Firebase/Storage'
+    pod 'Fabric'
+    pod 'Crashlytics'
     pod 'IQKeyboardManagerSwift'
     pod 'Kingfisher', '~> 4.0'
     pod 'CodableFirebase'

@@ -1,21 +1,21 @@
 //
-//  ViewController.swift
+//  ProductsVC.swift
 //  WatchCloud
 //
-//  Created by Bogdan Dovgopol on 10/5/19.
+//  Created by Bogdan Dovgopol on 12/5/19.
 //  Copyright © 2019 Bogdan Dovgopol. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class HomeVC: UIViewController {
+class ProductsVC: UIViewController {
+    //Outlets
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     //Variables
-    var categories = [Category]()
-    var selectedCategory: Category!
+    var products = [Product]()
+    var category: Category!
     var db: Firestore!
     var listener: ListenerRegistration!
     
@@ -24,32 +24,20 @@ class HomeVC: UIViewController {
         db = Firestore.firestore()
         navBarSettings()
         setupCollectionView()
-        setupInitialAnonymousUser()
     }
     
-    func navBarSettings(){
-        self.title = "Categories"
+    func navBarSettings() {
+        self.title = "Products"
     }
     
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
+        collectionView.register(UINib(nibName: Identifiers.ProductCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.ProductCell)
     }
 
-    func setupInitialAnonymousUser() {
-        if Auth.auth().currentUser == nil {
-            Auth.auth().signInAnonymously { (result, error) in
-                if let error = error {
-                    debugPrint(error)
-                    Auth.auth().handleFireAuthError(error: error, vc: self)
-                }
-            }
-        }
-    }
-    
-    func setCategoriesListener() {
-        listener = db.categories.addSnapshotListener({ (snap, error) in
+    func setProductsListener() {
+        listener = db.products(category: category.id).addSnapshotListener({ (snap, error) in
             
             if let error = error {
                 debugPrint(error.localizedDescription)
@@ -59,13 +47,13 @@ class HomeVC: UIViewController {
             snap?.documentChanges.forEach({ (change) in
                 
                 let data = change.document.data()
-                let category = Category.init(data: data)
-                
+                let product = Product.init(data: data)
+                                
                 switch change.type {
                 case .added:
-                    self.onDocumentAdded(change: change, category: category)
+                    self.onDocumentAdded(change: change, product: product)
                 case .modified:
-                    self.onDocumentModified(change: change, category: category)
+                    self.onDocumentModified(change: change, product: product)
                 case .removed:
                     self.onDocumentRemoved(change: change)
                 }
@@ -76,43 +64,37 @@ class HomeVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        setCategoriesListener()
+        setProductsListener()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         //stop listening to updates = save quota
         listener.remove()
-        categories.removeAll()
+        products.removeAll()
         collectionView.reloadData()
-    }
-    
-    private func presentLoginController(){
-        let storyboard = UIStoryboard(name: Storyboard.AuthStoryboard, bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: StoryboardId.Auth)
-        present(controller, animated: false, completion: nil)
     }
 }
 
-extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ProductsVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
-    func onDocumentAdded(change: DocumentChange, category: Category) {
+    func onDocumentAdded(change: DocumentChange, product: Product) {
         let newIndex = Int(change.newIndex)
-        categories.insert(category, at: newIndex)
+        products.insert(product, at: newIndex)
         collectionView.insertItems(at: [IndexPath(item: newIndex, section: 0)])
     }
     
-    func onDocumentModified(change: DocumentChange, category: Category) {
+    func onDocumentModified(change: DocumentChange, product: Product) {
         if change.newIndex == change.oldIndex {
             //item changed but remained in the same position
             let index = Int(change.newIndex)
-            categories[index] = category
+            products[index] = product
             collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
         } else {
             //item changed and changed position
             let oldIndex = Int(change.oldIndex)
             let newIndex = Int(change.newIndex)
-            categories.remove(at: oldIndex)
-            categories.insert(category, at: newIndex)
+            products.remove(at: oldIndex)
+            products.insert(product, at: newIndex)
             
             collectionView.moveItem(at: IndexPath(item: oldIndex, section: 0), to: IndexPath(item: newIndex, section: 0))
         }
@@ -120,17 +102,17 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
     
     func onDocumentRemoved(change: DocumentChange) {
         let oldIndex = Int(change.oldIndex)
-        categories.remove(at: oldIndex)
+        products.remove(at: oldIndex)
         collectionView.deleteItems(at: [IndexPath(item: oldIndex, section: 0)])
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
+        return products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.CategoryCell, for: indexPath) as? CategoryCell {
-            cell.configureCell(category: categories[indexPath.item])
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifiers.ProductCell, for: indexPath) as? ProductCell {
+            cell.configureCell(product: products[indexPath.item])
             return cell
         }
         return UICollectionViewCell()
@@ -145,18 +127,4 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedCategory = categories[indexPath.item]
-        performSegue(withIdentifier: Segues.ToProducts, sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Segues.ToProducts {
-            if let destination = segue.destination as? ProductsVC {
-                destination.category = selectedCategory
-            }
-        }
-    }
-
 }
-
