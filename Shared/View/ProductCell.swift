@@ -20,7 +20,7 @@ class ProductCell: UICollectionViewCell {
     
     func configureCell(product: Product) {
         productName.text = product.name
-        debugPrint(productName.text)
+        debugPrint("ProductCell: \(productName.text)")
         price.text = "$\(product.price)"
         if let url = URL(string: product.imgUrl) {
             productImg.kf.setImage(with: url)

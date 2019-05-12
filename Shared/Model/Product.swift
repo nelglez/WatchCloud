@@ -30,5 +30,7 @@ struct Product {
         self.isActive = data["isActive"] as? Bool ?? true
         self.favorite = data["favorite"] as? Bool ?? false
         self.timestamp = data["timestamp"] as? Timestamp ?? Timestamp()
+        
+        debugPrint("ProductModel: \(self.name)")
     }
 }
