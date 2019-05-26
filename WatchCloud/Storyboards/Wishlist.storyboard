@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nWr-as-9eW">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vQ3-VA-nrf">
+            <objects>
+                <navigationController storyboardIdentifier="home" automaticallyAdjustsScrollViewInsets="NO" id="nWr-as-9eW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="wish_empty" selectedImage="wish_filled" id="Tem-BV-jbU"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="IHz-iv-agc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.015686274510000001" green="0.60392156860000001" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="37"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="00z-Av-79y" kind="relationship" relationship="rootViewController" id="Q2L-a8-zZY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I8l-Ak-FqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="107.8125"/>
+        </scene>
+        <!--WishlistVC-->
+        <scene sceneID="Rav-4s-qkJ">
+            <objects>
+                <viewController id="00z-Av-79y" customClass="WishlistVC" customModule="WatchCloud" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lvd-UJ-Vuo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DPE-dS-e2i">
+                                <rect key="frame" x="12" y="152" width="390" height="661"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DPE-dS-e2i" firstAttribute="leading" secondItem="pn1-Ro-9ld" secondAttribute="leading" constant="12" id="8VA-za-0su"/>
+                            <constraint firstItem="DPE-dS-e2i" firstAttribute="top" secondItem="pn1-Ro-9ld" secondAttribute="top" constant="12" id="Kut-RC-CNF"/>
+                            <constraint firstItem="pn1-Ro-9ld" firstAttribute="trailing" secondItem="DPE-dS-e2i" secondAttribute="trailing" constant="12" id="OlF-2m-uoM"/>
+                            <constraint firstItem="pn1-Ro-9ld" firstAttribute="bottom" secondItem="DPE-dS-e2i" secondAttribute="bottom" id="ZMR-PR-S6v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pn1-Ro-9ld"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c1G-5S-jrv"/>
+                    <connections>
+                        <outlet property="tableView" destination="DPE-dS-e2i" id="ypm-Qx-kGL"/>
+                        <segue destination="zmw-Pc-6a7" kind="show" identifier="toProductDetailsFromWishList" id="AUI-XH-zjg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3P-6j-420" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836" y="108"/>
+        </scene>
+        <!--ProductDetailsVC-->
+        <scene sceneID="MXh-Mm-2zs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="ProductDetailsVC" id="zmw-Pc-6a7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esF-6b-YL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2444" y="108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wish_empty" width="25" height="25"/>
+        <image name="wish_filled" width="25" height="25"/>
+    </resources>
+</document>

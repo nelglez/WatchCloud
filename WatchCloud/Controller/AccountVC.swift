@@ -13,23 +13,27 @@ import Fabric
 
 class AccountVC: UIViewController {
 
+    //Outlets
     @IBOutlet weak var loginOutBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navBarSettings()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if let user = Auth.auth().currentUser, !user.isAnonymous {
-            //we are logged in
-            loginOutBtn.setTitle("Logout", for: .normal)
-        } else {
-            presentLoginController()
-        }
+//        if let user = Auth.auth().currentUser, !user.isAnonymous {
+//            //we are logged in
+//            if UserService.userListener == nil {
+//                UserService.getCurrentUser()
+//            }
+//        } else {
+//            presentLoginController()
+//        }
     }
     
-    func navBarSettings(){
-        self.title = "Account"
+    func navBarSettings() {
+        self.navigationItem.title = "Account"
     }
     
     @IBAction func loginBtn(_ sender: Any) {

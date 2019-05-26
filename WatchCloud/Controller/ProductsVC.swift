@@ -15,6 +15,7 @@ class ProductsVC: UIViewController {
     
     //Variables
     var products = [Product]()
+    var selectedProduct: Product!
     var category: Category!
     var db: Firestore!
     var listener: ListenerRegistration!
@@ -27,7 +28,10 @@ class ProductsVC: UIViewController {
     }
     
     func navBarSettings() {
-        self.title = "Products"
+        let backButton = UIBarButtonItem()
+        backButton.title = "Back"
+        self.navigationItem.backBarButtonItem = backButton
+        self.navigationItem.title = "Product"
     }
     
     func setupCollectionView() {
@@ -68,6 +72,7 @@ class ProductsVC: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
         //stop listening to updates = save quota
         listener.remove()
         products.removeAll()
@@ -88,7 +93,9 @@ extension ProductsVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
             //item changed but remained in the same position
             let index = Int(change.newIndex)
             products[index] = product
+            
             collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
+            
         } else {
             //item changed and changed position
             let oldIndex = Int(change.oldIndex)
@@ -97,13 +104,16 @@ extension ProductsVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
             products.insert(product, at: newIndex)
             
             collectionView.moveItem(at: IndexPath(item: oldIndex, section: 0), to: IndexPath(item: newIndex, section: 0))
+            
         }
     }
     
     func onDocumentRemoved(change: DocumentChange) {
         let oldIndex = Int(change.oldIndex)
         products.remove(at: oldIndex)
+        
         collectionView.deleteItems(at: [IndexPath(item: oldIndex, section: 0)])
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -125,6 +135,19 @@ extension ProductsVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayo
         let cellHeight = cellWidth * 1.5
         
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedProduct = products[indexPath.item]
+        performSegue(withIdentifier: Segues.ToProductDetails, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.ToProductDetails {
+            if let destination = segue.destination as? ProductDetailsVC {
+                destination.product = selectedProduct
+            }
+        }
     }
     
 }

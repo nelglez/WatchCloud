@@ -9,9 +9,11 @@
 import UIKit
 
 class ProductCell: UICollectionViewCell {
-    @IBOutlet weak var productImg: UIImageView!
+    
+    //Outlets
     @IBOutlet weak var productName: UILabel!
-    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var productImg: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,11 +22,15 @@ class ProductCell: UICollectionViewCell {
     
     func configureCell(product: Product) {
         productName.text = product.name
-        debugPrint("ProductCell: \(productName.text)")
-        price.text = "$\(product.price)"
         if let url = URL(string: product.imgUrl) {
             productImg.kf.setImage(with: url)
         }
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        if let price = formatter.string(from: product.price as NSNumber) {
+            productPrice.text = price
+        }
     }
-    
+
 }

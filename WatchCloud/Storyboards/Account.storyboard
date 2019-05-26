@@ -18,18 +18,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CT-Ht-bTT">
-                                <rect key="frame" x="188" y="433" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CT-Ht-bTT" customClass="RoundedButton" customModule="WatchCloud" customModuleProvider="target">
+                                <rect key="frame" x="20" y="753" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.16862745100000001" green="0.66666666669999997" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wrJ-3R-4Qe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginBtn:" destination="qJp-HO-vdk" eventType="touchUpInside" id="uef-2D-Sn2"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0CT-Ht-bTT" firstAttribute="centerY" secondItem="kUR-sK-CJZ" secondAttribute="centerY" id="4iv-li-Sv3"/>
-                            <constraint firstItem="0CT-Ht-bTT" firstAttribute="centerX" secondItem="kUR-sK-CJZ" secondAttribute="centerX" id="kFh-k0-CNn"/>
+                            <constraint firstItem="3FN-SU-zOf" firstAttribute="trailing" secondItem="0CT-Ht-bTT" secondAttribute="trailing" constant="20" id="7jB-Tz-DMC"/>
+                            <constraint firstItem="3FN-SU-zOf" firstAttribute="bottom" secondItem="0CT-Ht-bTT" secondAttribute="bottom" constant="20" id="NvB-9Q-OrH"/>
+                            <constraint firstItem="0CT-Ht-bTT" firstAttribute="leading" secondItem="3FN-SU-zOf" secondAttribute="leading" constant="20" id="QwH-Je-pDn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3FN-SU-zOf"/>
                     </view>
@@ -42,11 +55,11 @@
             </objects>
             <point key="canvasLocation" x="1958" y="791"/>
         </scene>
-        <!--Account-->
+        <!--Navigation Controller-->
         <scene sceneID="wfu-2z-pLg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dlL-Pt-3xy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" id="GZc-kW-7Ga"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile_empty" selectedImage="profile_filled" id="GZc-kW-7Ga"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6zX-TY-epn">
@@ -68,4 +81,8 @@
             <point key="canvasLocation" x="1048" y="791"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile_empty" width="25" height="25"/>
+        <image name="profile_filled" width="25" height="25"/>
+    </resources>
 </document>

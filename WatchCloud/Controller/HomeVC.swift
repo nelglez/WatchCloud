@@ -25,10 +25,26 @@ class HomeVC: UIViewController {
         navBarSettings()
         setupCollectionView()
         setupInitialAnonymousUser()
+        
+        if let user = Auth.auth().currentUser, !user.isAnonymous {
+            //we are logged in
+            if UserService.userListener == nil {
+                UserService.getCurrentUser()
+            }
+        } else {
+            presentLoginController()
+        }
     }
     
-    func navBarSettings(){
-        self.title = "Categories"
+    override func viewDidAppear(_ animated: Bool) {
+        setCategoriesListener()
+    }
+    
+    func navBarSettings() {
+        let backButton = UIBarButtonItem()
+        backButton.title = "Back"
+        self.navigationItem.backBarButtonItem = backButton
+        self.navigationItem.title = "Categories"
     }
     
     func setupCollectionView() {
@@ -49,10 +65,12 @@ class HomeVC: UIViewController {
     }
     
     func setCategoriesListener() {
+        activityIndicator.startAnimating()
+        
         listener = db.categories.addSnapshotListener({ (snap, error) in
-            
             if let error = error {
                 debugPrint(error.localizedDescription)
+                self.activityIndicator.stopAnimating()
                 return
             }
             
@@ -71,15 +89,13 @@ class HomeVC: UIViewController {
                 }
                 
             })
-            
         })
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        setCategoriesListener()
+        
+        activityIndicator.stopAnimating()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
         //stop listening to updates = save quota
         listener.remove()
         categories.removeAll()

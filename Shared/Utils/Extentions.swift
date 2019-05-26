@@ -14,6 +14,10 @@ extension String {
     var isNotEmpty : Bool {
         return !isEmpty
     }
+    
+    var toDouble: Double {
+        return Double(self)!
+    }
 }
 
 extension UIViewController {

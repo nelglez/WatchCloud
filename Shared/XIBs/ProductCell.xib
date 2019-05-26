@@ -12,28 +12,34 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="gTV-IL-0wX" customClass="ProductCell" customModule="WatchCloud" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCell" customModule="WatchCloud" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m9v-zW-8Zu">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="175.5"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Efd-JG-cwW">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="180.5"/>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WtB-d0-Een">
-                        <rect key="frame" x="8" y="190.5" width="184" height="44.5"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SUF-ej-g7x">
+                        <rect key="frame" x="8" y="195.5" width="184" height="46.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sxq-la-iCJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DOP-nZ-3FA">
                                 <rect key="frame" x="0.0" y="0.0" width="184" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="gTW-o4-Dhe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9p-St-Jb8">
-                                <rect key="frame" x="0.0" y="28.5" width="184" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOr-oC-iy6">
+                                <rect key="frame" x="0.0" y="28.5" width="184" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="18" id="Baf-99-U6D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,19 +49,19 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="WtB-d0-Een" secondAttribute="trailing" constant="8" id="OLb-eP-CzP"/>
-                <constraint firstItem="m9v-zW-8Zu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QGA-aO-Eka"/>
-                <constraint firstAttribute="trailing" secondItem="m9v-zW-8Zu" secondAttribute="trailing" id="RhC-6j-0FN"/>
-                <constraint firstItem="WtB-d0-Een" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="UIY-U7-vPw"/>
-                <constraint firstItem="WtB-d0-Een" firstAttribute="top" secondItem="m9v-zW-8Zu" secondAttribute="bottom" constant="15" id="Zye-nw-fpC"/>
-                <constraint firstAttribute="bottom" secondItem="WtB-d0-Een" secondAttribute="bottom" constant="15" id="eNZ-m0-DH2"/>
-                <constraint firstItem="m9v-zW-8Zu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hE2-mB-yMg"/>
+                <constraint firstItem="Efd-JG-cwW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AvG-DW-8qa"/>
+                <constraint firstAttribute="trailing" secondItem="SUF-ej-g7x" secondAttribute="trailing" constant="8" id="BTM-Qs-Sst"/>
+                <constraint firstItem="SUF-ej-g7x" firstAttribute="top" secondItem="Efd-JG-cwW" secondAttribute="bottom" constant="15" id="a4R-M6-lx2"/>
+                <constraint firstItem="Efd-JG-cwW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fnM-Fn-Orl"/>
+                <constraint firstAttribute="bottom" secondItem="SUF-ej-g7x" secondAttribute="bottom" constant="8" id="gLw-1F-WDS"/>
+                <constraint firstItem="SUF-ej-g7x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="rQo-UI-jGx"/>
+                <constraint firstAttribute="trailing" secondItem="Efd-JG-cwW" secondAttribute="trailing" id="umg-9Q-Ydc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
-                <outlet property="price" destination="u9p-St-Jb8" id="5TN-Hl-TZi"/>
-                <outlet property="productImg" destination="m9v-zW-8Zu" id="xqw-4Y-3EY"/>
-                <outlet property="productName" destination="Sxq-la-iCJ" id="hDG-Ga-nAb"/>
+                <outlet property="productImg" destination="Efd-JG-cwW" id="lB2-r2-at5"/>
+                <outlet property="productName" destination="DOP-nZ-3FA" id="k8Z-kp-Ilx"/>
+                <outlet property="productPrice" destination="QOr-oC-iy6" id="7Ms-GZ-VE3"/>
             </connections>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
         </collectionViewCell>

@@ -68,12 +68,7 @@ class RegisterVC: UIViewController {
         
         activityIndicator.startAnimating()
         
-        guard let authUser = Auth.auth().currentUser else {
-            return
-        }
-        
-        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
-        authUser.link(with: credential) { (result, error) in
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 debugPrint(error)
                 Auth.auth().handleFireAuthError(error: error, vc: self)
@@ -81,10 +76,52 @@ class RegisterVC: UIViewController {
                 return
             }
             
-            self.activityIndicator.stopAnimating()
-            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+            guard let fireUser = result?.user else { return }
+            let user = User.init(id: fireUser.uid, email: email, stripeId: "")
+            
+            //upload to firestore
+            self.createFirestoreUser(user: user)
         }
         
+//        guard let authUser = Auth.auth().currentUser else {
+//            return
+//        }
+//
+//        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
+//        authUser.link(with: credential) { (result, error) in
+//            if let error = error {
+//                debugPrint(error)
+//                Auth.auth().handleFireAuthError(error: error, vc: self)
+//                self.activityIndicator.stopAnimating()
+//                return
+//            }
+//
+//            self.activityIndicator.stopAnimating()
+//            self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+//        }
+        
     }
+    
+    func createFirestoreUser(user: User) {
+        let newUserRef = Firestore.firestore().collection("users").document(user.id)
+        
+        let data = User.modelToData(user: user)
+        
+        newUserRef.setData(data) { (error) in
+            if let error = error {
+                Auth.auth().handleFireAuthError(error: error, vc: self)
+                debugPrint("Unable to upload an user: \(error.localizedDescription)")
+            } else {
+                self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+            }
+            self.activityIndicator.stopAnimating()
+        }
+
+    }
+    
+    @IBAction func hasAccountClicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }

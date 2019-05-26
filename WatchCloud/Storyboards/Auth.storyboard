@@ -138,20 +138,20 @@
                                 </subviews>
                             </stackView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="soa-ib-0pd">
-                                <rect key="frame" x="188.5" y="436.5" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="285" width="37" height="37"/>
                                 <color key="color" red="0.16862745100000001" green="0.66666666669999997" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lbM-1o-ScO" firstAttribute="top" secondItem="uDq-5P-fK2" secondAttribute="top" id="3I8-f8-ogR"/>
+                            <constraint firstItem="soa-ib-0pd" firstAttribute="top" secondItem="lbM-1o-ScO" secondAttribute="bottom" constant="15" id="9Of-Nh-haY"/>
                             <constraint firstItem="7yK-bV-zxK" firstAttribute="leading" secondItem="HFs-yH-MTM" secondAttribute="leading" constant="40" id="9vn-rk-QlL"/>
                             <constraint firstItem="7yK-bV-zxK" firstAttribute="top" secondItem="lbM-1o-ScO" secondAttribute="bottom" constant="70" id="K8y-8x-Ne5"/>
                             <constraint firstItem="HFs-yH-MTM" firstAttribute="trailing" secondItem="7yK-bV-zxK" secondAttribute="trailing" constant="40" id="OM7-M3-yT7"/>
                             <constraint firstItem="lbM-1o-ScO" firstAttribute="trailing" secondItem="HFs-yH-MTM" secondAttribute="trailing" id="PcR-XF-Djt"/>
                             <constraint firstItem="lbM-1o-ScO" firstAttribute="leading" secondItem="HFs-yH-MTM" secondAttribute="leading" id="aMd-gP-1Kx"/>
-                            <constraint firstItem="soa-ib-0pd" firstAttribute="centerX" secondItem="uDq-5P-fK2" secondAttribute="centerX" id="iQM-CT-4ZC"/>
-                            <constraint firstItem="soa-ib-0pd" firstAttribute="centerY" secondItem="CeK-KW-aHr" secondAttribute="centerY" id="wiN-ea-Tfh"/>
+                            <constraint firstItem="soa-ib-0pd" firstAttribute="centerX" secondItem="uDq-5P-fK2" secondAttribute="centerX" id="jkH-PF-pHL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HFs-yH-MTM"/>
                     </view>
@@ -259,6 +259,7 @@
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="hasAccountClicked:" destination="MOZ-1x-1zM" eventType="touchUpInside" id="Dx3-nJ-YnY"/>
                                             <segue destination="XUm-q9-CcP" kind="show" id="BAF-6d-P1p"/>
                                         </connections>
                                     </button>
