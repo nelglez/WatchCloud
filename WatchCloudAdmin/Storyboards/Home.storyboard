@@ -158,7 +158,6 @@
         <!--Admin ProductsVC-->
         <scene sceneID="6nj-Bb-zO1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WMo-45-wXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="VIJ-oD-btJ" customClass="AdminProductsVC" customModule="WatchCloudAdmin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2oV-mp-SkB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -191,6 +190,7 @@
                         <segue destination="pzG-JO-Ldz" kind="show" identifier="toEditCategoryVC" id="vOK-OE-7ww"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMo-45-wXm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2754" y="567"/>
         </scene>
@@ -349,6 +349,6 @@
         <image name="categories" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vOK-OE-7ww"/>
+        <segue reference="xXd-li-MTk"/>
     </inferredMetricsTieBreakers>
 </document>

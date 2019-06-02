@@ -25,7 +25,11 @@ class HomeVC: UIViewController {
         navBarSettings()
         setupCollectionView()
         setupInitialAnonymousUser()
-        
+//        setCategoriesListener()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setCategoriesListener()
         if let user = Auth.auth().currentUser, !user.isAnonymous {
             //we are logged in
             if UserService.userListener == nil {
@@ -34,10 +38,6 @@ class HomeVC: UIViewController {
         } else {
             presentLoginController()
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        setCategoriesListener()
     }
     
     func navBarSettings() {

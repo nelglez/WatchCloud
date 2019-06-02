@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AdminHomeVC: HomeVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let addCategoryBtn = UIBarButtonItem(image: #imageLiteral(resourceName: "add"), style: .plain, target: self, action: #selector(addCategory))
         navigationItem.rightBarButtonItem = addCategoryBtn
     }

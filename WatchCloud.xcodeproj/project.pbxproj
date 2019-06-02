@@ -18,6 +18,16 @@
 		6F2E799C2289B6BB00910601 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E79962288754E00910601 /* ProductCell.swift */; };
 		6F2E799E2289C56F00910601 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2E799D2289C56F00910601 /* ProductDetailsVC.swift */; };
 		6F73B7C122860FDA005CFD55 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F73B7C022860FDA005CFD55 /* RegisterVC.swift */; };
+		6F7FC59B229D408B00814615 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FC59A229D408B00814615 /* CartVC.swift */; };
+		6F7FC59E229D462B00814615 /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FC59C229D462B00814615 /* CartItemCell.swift */; };
+		6F7FC59F229D462B00814615 /* CartItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FC59C229D462B00814615 /* CartItemCell.swift */; };
+		6F7FC5A0229D462B00814615 /* CartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F7FC59D229D462B00814615 /* CartItemCell.xib */; };
+		6F7FC5A1229D462B00814615 /* CartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F7FC59D229D462B00814615 /* CartItemCell.xib */; };
+		6F7FC5A4229D47AC00814615 /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FC5A3229D47AC00814615 /* StripeCart.swift */; };
+		6F7FC5A6229D6A5200814615 /* StripeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FC5A5229D6A5200814615 /* StripeApi.swift */; };
+		6F7FC5A7229D88F000814615 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC36B229055EC0025C7FF /* UserService.swift */; };
+		6F7FC5A8229D891100814615 /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F7FC5A3229D47AC00814615 /* StripeCart.swift */; };
+		6F7FC5AB229EC9F100814615 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F7FC5AA229EC9F100814615 /* GoogleService-Info.plist */; };
 		6F806F3F2285E89600BCF18B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F806F3E2285E89600BCF18B /* AppDelegate.swift */; };
 		6F806F412285E89600BCF18B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F806F402285E89600BCF18B /* HomeVC.swift */; };
 		6F806F442285E89600BCF18B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F806F422285E89600BCF18B /* Main.storyboard */; };
@@ -43,7 +53,6 @@
 		6FAAC37022917F5A0025C7FF /* WishlistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC36F22917F5A0025C7FF /* WishlistVC.swift */; };
 		6FAAC3772291A62A0025C7FF /* WishProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAAC3752291A62A0025C7FF /* WishProductCell.swift */; };
 		6FAAC3782291A62A0025C7FF /* WishProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FAAC3762291A62A0025C7FF /* WishProductCell.xib */; };
-		6FACA1E62286210100395BA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA1E52286210100395BA8 /* GoogleService-Info.plist */; };
 		6FACA1E82286C04400395BA8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6FACA1E72286C04400395BA8 /* GoogleService-Info.plist */; };
 		6FACA1EB2286D2A400395BA8 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA1EA2286D2A400395BA8 /* Extentions.swift */; };
 		6FACA1EC2286D2A400395BA8 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FACA1EA2286D2A400395BA8 /* Extentions.swift */; };
@@ -79,6 +88,12 @@
 		6F2E79972288754E00910601 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		6F2E799D2289C56F00910601 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		6F73B7C022860FDA005CFD55 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		6F7FC59A229D408B00814615 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		6F7FC59C229D462B00814615 /* CartItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemCell.swift; sourceTree = "<group>"; };
+		6F7FC59D229D462B00814615 /* CartItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemCell.xib; sourceTree = "<group>"; };
+		6F7FC5A3229D47AC00814615 /* StripeCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeCart.swift; sourceTree = "<group>"; };
+		6F7FC5A5229D6A5200814615 /* StripeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeApi.swift; sourceTree = "<group>"; };
+		6F7FC5AA229EC9F100814615 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6F806F3B2285E89600BCF18B /* WatchCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F806F3E2285E89600BCF18B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F806F402285E89600BCF18B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -104,7 +119,6 @@
 		6FAAC36F22917F5A0025C7FF /* WishlistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistVC.swift; sourceTree = "<group>"; };
 		6FAAC3752291A62A0025C7FF /* WishProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishProductCell.swift; sourceTree = "<group>"; };
 		6FAAC3762291A62A0025C7FF /* WishProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishProductCell.xib; sourceTree = "<group>"; };
-		6FACA1E52286210100395BA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6FACA1E72286C04400395BA8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6FACA1EA2286D2A400395BA8 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		6FACA1ED2286D64600395BA8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -163,6 +177,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6F7FC5A2229D479D00814615 /* Stripe */ = {
+			isa = PBXGroup;
+			children = (
+				6F7FC5A3229D47AC00814615 /* StripeCart.swift */,
+				6F7FC5A5229D6A5200814615 /* StripeApi.swift */,
+			);
+			path = Stripe;
+			sourceTree = "<group>";
+		};
 		6F806F322285E89600BCF18B = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +211,7 @@
 		6F806F3D2285E89600BCF18B /* WatchCloud */ = {
 			isa = PBXGroup;
 			children = (
+				6F7FC5A2229D479D00814615 /* Stripe */,
 				6FAAC36A229055DD0025C7FF /* Services */,
 				6F806F6B2285FD9500BCF18B /* Controller */,
 				6F806F6A2285FD9200BCF18B /* View */,
@@ -195,7 +219,7 @@
 				6FACA1FD2287107200395BA8 /* XIBs */,
 				6F806F3E2285E89600BCF18B /* AppDelegate.swift */,
 				6F806F4A2285E89800BCF18B /* Info.plist */,
-				6FACA1E52286210100395BA8 /* GoogleService-Info.plist */,
+				6F7FC5AA229EC9F100814615 /* GoogleService-Info.plist */,
 			);
 			path = WatchCloud;
 			sourceTree = "<group>";
@@ -265,6 +289,7 @@
 				6F2E798A2288255500910601 /* ProductsVC.swift */,
 				6F2E799D2289C56F00910601 /* ProductDetailsVC.swift */,
 				6FAAC36F22917F5A0025C7FF /* WishlistVC.swift */,
+				6F7FC59A229D408B00814615 /* CartVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -322,6 +347,7 @@
 				6FACA20822871BC700395BA8 /* CategoryCell.swift */,
 				6F2E79962288754E00910601 /* ProductCell.swift */,
 				6FAAC3752291A62A0025C7FF /* WishProductCell.swift */,
+				6F7FC59C229D462B00814615 /* CartItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +367,7 @@
 				6FACA20922871BC700395BA8 /* CategoryCell.xib */,
 				6F2E79972288754E00910601 /* ProductCell.xib */,
 				6FAAC3762291A62A0025C7FF /* WishProductCell.xib */,
+				6F7FC59D229D462B00814615 /* CartItemCell.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -437,11 +464,12 @@
 				6FACA1F52286E96F00395BA8 /* Assets.xcassets in Resources */,
 				6F806F492285E89800BCF18B /* LaunchScreen.storyboard in Resources */,
 				6FAAC36E22917EF90025C7FF /* Wishlist.storyboard in Resources */,
-				6FACA1E62286210100395BA8 /* GoogleService-Info.plist in Resources */,
+				6F7FC5A0229D462B00814615 /* CartItemCell.xib in Resources */,
 				6FACA1F82286EB2100395BA8 /* Account.storyboard in Resources */,
 				6F2E79992288754E00910601 /* ProductCell.xib in Resources */,
 				6FACA20C22871BC700395BA8 /* CategoryCell.xib in Resources */,
 				6F806F442285E89600BCF18B /* Main.storyboard in Resources */,
+				6F7FC5AB229EC9F100814615 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +479,7 @@
 			files = (
 				6FAAC357228D631F0025C7FF /* Home.storyboard in Resources */,
 				6FACA20D22871BC700395BA8 /* CategoryCell.xib in Resources */,
+				6F7FC5A1229D462B00814615 /* CartItemCell.xib in Resources */,
 				6F806F612285EFAE00BCF18B /* LaunchScreen.storyboard in Resources */,
 				6FACA1E82286C04400395BA8 /* GoogleService-Info.plist in Resources */,
 				6F2E799A2289B6A100910601 /* ProductCell.xib in Resources */,
@@ -526,6 +555,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
 			outputFileListPaths = (
 			);
@@ -602,8 +632,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7FC59E229D462B00814615 /* CartItemCell.swift in Sources */,
 				6FAAC3772291A62A0025C7FF /* WishProductCell.swift in Sources */,
 				6FACA2032287168000395BA8 /* FirebaseExtensions.swift in Sources */,
+				6F7FC5A6229D6A5200814615 /* StripeApi.swift in Sources */,
+				6F7FC59B229D408B00814615 /* CartVC.swift in Sources */,
 				6F2E799E2289C56F00910601 /* ProductDetailsVC.swift in Sources */,
 				6FAAC36C229055EC0025C7FF /* UserService.swift in Sources */,
 				6FACA1FC2286F34C00395BA8 /* AccountVC.swift in Sources */,
@@ -621,6 +654,7 @@
 				6FAAC37022917F5A0025C7FF /* WishlistVC.swift in Sources */,
 				6F2E79982288754E00910601 /* ProductCell.swift in Sources */,
 				6FACA20622871B3000395BA8 /* Category.swift in Sources */,
+				6F7FC5A4229D47AC00814615 /* StripeCart.swift in Sources */,
 				6FACA20A22871BC700395BA8 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -629,6 +663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F7FC5A8229D891100814615 /* StripeCart.swift in Sources */,
 				6FAAC366228D88880025C7FF /* AddEditProductVC.swift in Sources */,
 				6F806F572285EFAD00BCF18B /* AppDelegate.swift in Sources */,
 				6F2E799B2289B6A800910601 /* Product.swift in Sources */,
@@ -642,7 +677,9 @@
 				6F2E799C2289B6BB00910601 /* ProductCell.swift in Sources */,
 				6FAAC35F228D66460025C7FF /* ProductDetailsVC.swift in Sources */,
 				6FAAC35D228D65E10025C7FF /* AdminHomeVC.swift in Sources */,
+				6F7FC5A7229D88F000814615 /* UserService.swift in Sources */,
 				6FAAC362228D6D510025C7FF /* AdminProductsVC.swift in Sources */,
+				6F7FC59F229D462B00814615 /* CartItemCell.swift in Sources */,
 				6FAAC35E228D66350025C7FF /* ProductsVC.swift in Sources */,
 				6FACA1EF2286D64600395BA8 /* Constants.swift in Sources */,
 				6FACA20722871B3000395BA8 /* Category.swift in Sources */,
@@ -817,7 +854,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.dovgopol.WatchCloud;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.dovgopol.watchcloudpublic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -837,7 +874,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.dovgopol.WatchCloud;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.dovgopol.watchcloudpublic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -64,11 +64,14 @@ class ProductDetailsVC: UIViewController {
     }
     
     @IBAction func addToCartClicked(_ sender: Any) {
+        StripeCart.addItemToCart(item: product)
+        self.simpleAlert(title: "Item added to your cart", message: "")
     }
     
     @IBAction func favoriteClicked(_ sender: Any) {
         UserService.favoriteSelected(product: product)
         changeFavoriteIcon()
+        self.simpleAlert(title: "Item added to your wish list", message: "")
     }
 
     

@@ -9,12 +9,19 @@
 import UIKit
 import Kingfisher
 
+protocol WishProductCellDelegate: class {
+    func addToCart(product: Product)
+}
+
 class WishProductCell: UITableViewCell {
 
     //Outlets
     @IBOutlet weak var nameTxt: UILabel!
     @IBOutlet weak var priceTxt: UILabel!
     @IBOutlet weak var productImg: UIImageView!
+    
+    weak var delegate: WishProductCellDelegate?
+    private var product: Product!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +36,10 @@ class WishProductCell: UITableViewCell {
         
     }
     
-    func configureCell(product: Product) {
+    func configureCell(product: Product, delegate: WishProductCellDelegate) {
+        self.product = product
+        self.delegate = delegate
+        
         nameTxt.text = product.name
         if let url = URL(string: product.imgUrl) {
             productImg.kf.setImage(with: url)
@@ -42,6 +52,6 @@ class WishProductCell: UITableViewCell {
     }
     
     @IBAction func addToCartClicked(_ sender: Any) {
-        
+        delegate?.addToCart(product: product)
     }
 }

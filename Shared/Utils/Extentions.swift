@@ -27,3 +27,17 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+extension Int {
+    func penniesToFormattedCurrency() -> String {
+        let dollars = Double(self) / 100
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        
+        if let dollarString = formatter.string(from: dollars as NSNumber) {
+            return dollarString
+        }
+        
+        return "$0.00"
+    }
+}

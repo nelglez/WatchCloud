@@ -66,7 +66,6 @@ final class _UserService {
     
     func favoriteSelected(product: Product) {
         let favsRef = Firestore.firestore().collection("users").document(user.id).collection("favorites")
-        
         if favorites.contains(product) {
             //remove favorite
             favorites.removeAll{$0 == product}

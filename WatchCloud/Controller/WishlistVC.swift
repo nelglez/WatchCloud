@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseFirestore
 
-class WishlistVC: UIViewController {
+class WishlistVC: UIViewController, WishProductCellDelegate {
     
     //Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -78,6 +78,10 @@ class WishlistVC: UIViewController {
         })
     }
     
+    func addToCart(product: Product) {
+        StripeCart.addItemToCart(item: product)
+        self.simpleAlert(title: "Item added to your cart", message: "")
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
@@ -118,7 +122,6 @@ extension WishlistVC: UITableViewDelegate, UITableViewDataSource {
     func onDocumentRemoved(change: DocumentChange) {
         let oldIndex = Int(change.oldIndex)
         products.remove(at: oldIndex)
-        
         tableView.deleteRows(at: [IndexPath(item: oldIndex, section: 0)], with: .automatic)
         
     }
@@ -129,7 +132,7 @@ extension WishlistVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.WishProductCell, for: indexPath) as? WishProductCell {
-            cell.configureCell(product: products[indexPath.row])
+            cell.configureCell(product: products[indexPath.row], delegate: self)
             return cell
         }
         return UITableViewCell()
@@ -142,6 +145,7 @@ extension WishlistVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             UserService.favoriteSelected(product: products[indexPath.row])
+            self.simpleAlert(title: "Item removed from your wish list", message: "")
         }
     }
 }
