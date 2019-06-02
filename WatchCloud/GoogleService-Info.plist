@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>989653355516-n60ud0nf4elkft1t83c8a7m07u1f2b1t.apps.googleusercontent.com</string>
+	<string>989653355516-gl145mlfb18eu18fcf6t41j7ek45kk73.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.989653355516-n60ud0nf4elkft1t83c8a7m07u1f2b1t</string>
+	<string>com.googleusercontent.apps.989653355516-gl145mlfb18eu18fcf6t41j7ek45kk73</string>
 	<key>API_KEY</key>
 	<string>AIzaSyD-781jyg2NlzQt6L37dSh7lU6r2lwiRvI</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>dev.dovgopol.WatchCloud</string>
+	<string>dev.dovgopol.watchcloudpublic</string>
 	<key>PROJECT_ID</key>
 	<string>watchcloud-5c1fc</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:989653355516:ios:e929e1f43bfe6cae</string>
+	<string>1:989653355516:ios:fadb9fe83a349f8c</string>
 	<key>DATABASE_URL</key>
 	<string>https://watchcloud-5c1fc.firebaseio.com</string>
 </dict>
